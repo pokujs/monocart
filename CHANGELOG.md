@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0](https://github.com/pokujs/monocart/compare/v1.0.0...v1.1.0) (2026-04-06)
+## [1.0.0](https://github.com/pokujs/monocart/compare/v0.1.1...v1.0.0) (2026-04-06)
 
 
 ### Features
