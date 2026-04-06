@@ -1,0 +1,9 @@
+{
+  // JSONC: comments should be supported in .mcrrc
+  "reports": ["console-details"],
+  "logging": "error",
+  "filter": {
+    "**/node_modules/**": false,
+    "**/src/**": true
+  }
+}
