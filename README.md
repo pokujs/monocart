@@ -119,7 +119,7 @@ coverage({
 
 ### Enforce coverage thresholds
 
-Use the `onEnd` hook from monocart-coverage-reports:
+Use the `onEnd` hook from [**monocart-coverage-reports**](https://github.com/cenfun/monocart-coverage-reports?tab=readme-ov-file#onend-hook):
 
 ```js
 coverage({
