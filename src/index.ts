@@ -5,7 +5,7 @@ import { mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import process from 'node:process';
-import { isJsonConfig, loadConfig } from './config.js';
+import { isStaticConfig, loadConfig } from './config.js';
 
 export type { CoverageOptions } from './types.js';
 
@@ -76,7 +76,7 @@ export const coverage = (
 
       const shouldLoadMcrConfig =
         resolvedConfig !== false &&
-        (typeof resolvedConfig !== 'string' || !isJsonConfig(resolvedConfig));
+        (typeof resolvedConfig !== 'string' || !isStaticConfig(resolvedConfig));
 
       if (shouldLoadMcrConfig)
         await mcr.loadConfig(
