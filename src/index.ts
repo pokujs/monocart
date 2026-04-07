@@ -5,7 +5,7 @@ import { mkdirSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import process from 'node:process';
-import { isJsonConfig, loadConfig } from './config.js';
+import { isPluginConfig, loadConfig } from './config.js';
 
 export type { CoverageOptions } from './types.js';
 
@@ -34,12 +34,12 @@ export const coverage = (
 
     setup(context) {
       if (options.requireFlag && !process.argv.includes('--coverage')) return;
-      enabled = true;
-
       if (context.runtime !== 'node')
         console.warn(
           `[@pokujs/monocart] V8 coverage is only supported on Node.js (current runtime: ${context.runtime}). Coverage data may not be collected.`
         );
+
+      enabled = true;
 
       const cliConfig = process.argv
         .find((arg) => arg.startsWith('--coverageConfig'))
@@ -76,7 +76,7 @@ export const coverage = (
 
       const shouldLoadMcrConfig =
         resolvedConfig !== false &&
-        (typeof resolvedConfig !== 'string' || !isJsonConfig(resolvedConfig));
+        (typeof resolvedConfig !== 'string' || !isPluginConfig(resolvedConfig));
 
       if (shouldLoadMcrConfig)
         await mcr.loadConfig(
