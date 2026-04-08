@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/pokujs/monocart/compare/v1.0.0...v1.1.0) (2026-04-08)
+
+
+### Features
+
+* support for YAML and TOML config files ([#3](https://github.com/pokujs/monocart/issues/3)) ([2a4981f](https://github.com/pokujs/monocart/commit/2a4981ffbb8938c1f83de33e4333ce07d414ad4f))
+
 ## [1.0.0](https://github.com/pokujs/monocart/compare/v0.1.1...v1.0.0) (2026-04-06)
 
 
