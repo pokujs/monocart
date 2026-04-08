@@ -1,0 +1,7 @@
+# YAML: config file format should be supported
+reports:
+  - console-details
+logging: error
+filter:
+  '**/node_modules/**': false
+  '**/src/**': true

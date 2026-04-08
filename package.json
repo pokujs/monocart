@@ -26,7 +26,7 @@
   },
   "scripts": {
     "pretest": "npm run build",
-    "test": "poku test/e2e",
+    "test": "poku --sequential test/e2e",
     "prebuild": "rm -rf lib",
     "build": "tsc",
     "lint": "prettier --check .",
@@ -36,7 +36,9 @@
   },
   "dependencies": {
     "jsonc.min": "^1.1.2",
-    "monocart-coverage-reports": "^2.12.9"
+    "monocart-coverage-reports": "^2.12.9",
+    "toml.min": "^1.0.0",
+    "yaml.min": "^1.0.0"
   },
   "peerDependencies": {
     "poku": "^4.1.0"
